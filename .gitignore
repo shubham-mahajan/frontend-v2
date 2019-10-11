@@ -16,3 +16,5 @@ sandbox/*
 
 # themes
 themes/frontend-eds/*
+themes/ckan-national-grid
+themes/ckan_ng_theme_montreal

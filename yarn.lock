@@ -241,6 +241,13 @@
   dependencies:
     arrify "^1.0.1"
 
+"@datopian/ckan-montreal@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@datopian/ckan-montreal/-/ckan-montreal-1.0.6.tgz#a9b4e0d3603fcfa5427c4b7bec2522a82282dfee"
+  integrity sha512-NIL+f4K+Xf5M3XbXI2YTUD7B/rzJ2MH58pvg2lRrMRD+sRo+0hXP/5YcZ8mIWeE4xg6SJgNeC8l9RW13wD30Fg==
+  dependencies:
+    moment "^2.24.0"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"

@@ -271,7 +271,7 @@ module.exports = function () {
         owner: {
           name: profile.name,
           title: profile.title,
-          description: utils.processMarkdown.render(profile.description),
+          description: utils.processMarkdown.render(profile.description || ''),
           avatar: profile.image_display_url || profile.image_url
         },
         thisPageFullUrl: '//' + req.get('host') + req.originalUrl,
@@ -318,6 +318,12 @@ module.exports = function () {
       // Get owner details
       const owner = req.params.owner
       const profile = await Model.getProfile(owner)
+      if (!profile.created) { 
+        return res.status(404).render('404.html', {
+          message: `Page found: ${owner}`,
+          status: 404
+        })
+      }
       const created = new Date(profile.created)
       const joinYear = created.getUTCFullYear()
       const joinMonth = created.toLocaleString('en-us', { month: "long" })

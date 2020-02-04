@@ -260,6 +260,20 @@ module.exports = function () {
     }
   })
 
+  router.get("/dash", async (req, res, next) => {
+    try {
+      res.render("dash.html", {
+        title: "Custom Dash",
+        description:
+          "Checking Modification and custom Route for Next Gen",
+        slug: "Custom Dash"
+      });
+    } catch (err) {
+      /* istanbul ignore next */
+      next(err);
+    }
+  });
+
   // MUST come last in order to catch all the publisher pages
   router.get('/:owner', async (req, res, next) => {
     try {

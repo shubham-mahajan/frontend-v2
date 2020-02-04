@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title%}{{title}}{% endblock %}
+
+{% block bodyclass %}awesome{% endblock %}
+
+{% block content %}
+<section class="awesome-dashboard-heading">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="text-center">{{ title }}</h1>
+        <div class="col-sm-8 col-sm-offset-2">
+          <p class="text-center">{{ description }} <br />
+            <span class="highlight-text"></span></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
